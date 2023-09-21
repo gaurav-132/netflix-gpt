@@ -13,7 +13,13 @@
 - Create SignUp User Account    
 - Implemented Sign In User Api
 - Created Redux Store with userslice
-- 
+- Implemented Sign Out  
+- Update the Profile
+- Redirect if the user is  logged in redirect to /browse
+- Unsubscribed to the OnAuth State Change CallBack
+- Add Hardcoded Value to constant.js
+- Register TMDB API and create an App
+- Get the data from TMDB now playing Movies
 - 
 - 
 
