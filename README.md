@@ -20,6 +20,17 @@
 - Add Hardcoded Value to constant.js
 - Register TMDB API and create an App
 - Get the data from TMDB now playing Movies
+- Custom hook for now playing movies
+- Update Store with movies Data
+- Create a Movie Slice
+- Planning for main contaier and secondary Container
+- Fetch Data for Trailer Video
+- Update Store With Trailer Video Data
+- Embeded the youtube video
+- Make it autoplay and mute
+- Tailwind classes to main Container look awesome
+- 
+- 
 - 
 - 
 
