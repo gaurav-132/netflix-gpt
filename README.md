@@ -30,7 +30,16 @@
 - Make it autoplay and mute
 - Tailwind classes to main Container look awesome
 - Build Secondary Container
-- 
+- Build Movie List
+- Build Movie Card
+- TMDB Image CDN Url
+- Made the Browse Page amazing
+- usePopular Movies Custome hook
+- GPT Search Feature
+- GPT Search Page, SearchBar
+- (Feature) Add MultiLanguage Feature in Our App
+- Integrate GPT API's 
+- Get Open AI key
 - 
 - 
 

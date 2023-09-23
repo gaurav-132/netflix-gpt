@@ -6,7 +6,9 @@ import { useSelector } from 'react-redux'
 import { onAuthStateChanged } from "firebase/auth";
 import { useDispatch } from 'react-redux';
 import { addUser, removeUser } from '../utils/userSlice';
-import { LOGO } from '../utils/constants';
+import { LOGO, SUPPORTED_LANG } from '../utils/constants';
+import { toggleGptSearchView } from '../utils/gptSlice'
+import { changeLanguage } from '../utils/configSlice'
 
 
 const Header = () => {
@@ -15,6 +17,8 @@ const Header = () => {
 
     const navigate = useNavigate();
     const user = useSelector((store) => store.user);
+
+    const showGptSearch = useSelector((store) => store.gpt.showGptSearch);
 
     const handleSignOut = () => {
         signOut(auth).then(() => {
@@ -40,6 +44,14 @@ const Header = () => {
         return ()=> unsubscribe();
     },[])
 
+    const handleGptSearchClick = () => {
+        dispatch(toggleGptSearchView())
+    }
+
+    const handleLanguageChange = (e) => {
+        dispatch(changeLanguage(e.target.value));
+    }
+
     return (
         <div className='absolute w-full px-8 py-2 bg-gradient-to-b from-black z-10'>
             <div className='flex justify-between'>
@@ -53,6 +65,20 @@ const Header = () => {
                 {
                     user && (
                         <div className='flex justify-between'>
+                            {showGptSearch &&
+                                <select onChange={handleLanguageChange} className="px-8 h-8 mt-2 bg-gray-500 text-white rounded-sm outline-none mr-2">
+                                    {
+                                        SUPPORTED_LANG.map((lang)=>{
+                                            return(
+                                                <option className='p-0' value={lang.identifier} key={lang.identifier}>{lang.name}</option>
+                                            )
+                                        })
+                                    }
+                                </select>
+                            }
+                            <div className='mt-2 mr-2'>
+                                <button className='bg-purple-600 rounded-md text-white py-1 px-4' onClick={handleGptSearchClick}>{(showGptSearch)?'Home':'GPT Search'}</button>
+                            </div>
                             <div>
                                 <img className='w-12 h-12' src={user?.photoURL}></img>
                             </div>
