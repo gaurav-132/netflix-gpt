@@ -53,18 +53,18 @@ const Header = () => {
     }
 
     return (
-        <div className='absolute w-full px-8 py-2 bg-gradient-to-b from-black z-10'>
-            <div className='flex justify-between'>
-                <div>
+        <div className='absolute w-full px-8 py-2 bg-gradient-to-b from-black z-10 '>
+            <div className='flex md:flex-row justify-between'>
+                <div className='md:m-0 w-24 md:w-auto'>
                     <img 
                         src={LOGO}
                         alt='Logo'
-                        className='w-44'
+                        className='md:w-44'
                     />
                 </div>
                 {
                     user && (
-                        <div className='flex justify-between'>
+                        <div className='flex md:justify-between justify-center'>
                             {showGptSearch &&
                                 <select onChange={handleLanguageChange} className="px-8 h-8 mt-2 bg-gray-500 text-white rounded-sm outline-none mr-2">
                                     {
@@ -76,14 +76,22 @@ const Header = () => {
                                     }
                                 </select>
                             }
-                            <div className='mt-2 mr-2'>
-                                <button className='bg-purple-600 rounded-md text-white py-1 px-4' onClick={handleGptSearchClick}>{(showGptSearch)?'Home':'GPT Search'}</button>
+                            
+                            <div className='md:hidden rounded-full bg-red mt-1 flex flex-col'>
+                                <span className='bg-white inline-block h-1 w-6 rounded-full mt-1 transition duration-300'></span>
+                                <span className='bg-white inline-block h-1 w-6 rounded-full mt-1 transition duration-300'></span>
+                                <span className='bg-white inline-block h-1 w-6 rounded-full mt-1 transition duration-300'></span>
                             </div>
-                            <div>
-                                <img className='w-12 h-12' src={user?.photoURL}></img>
+        
+                            
+                            <div className='hidden md:block mt-2 mr-2'>
+                                <button className='bg-purple-600 rounded-md text-sm  text-white md:py-2 px-4' onClick={handleGptSearchClick}>{(showGptSearch)?'Home':'GPT Search'}</button>
                             </div>
-                            <div>
-                                <button onClick={handleSignOut} className='font-bold bg-red-400 text-white p-2'>Sign Out</button>
+                            {/* <div className='hidden md:block'>
+                                <img className=' w-12 h-12' src={user?.photoURL}></img>
+                            </div> */}
+                            <div className='hidden md:block mt-2 mr-2'>
+                                <button onClick={handleSignOut} className='bg-red-400 rounded-md text-sm  text-white md:py-2 px-4'>Sign Out</button>
                             </div>
                         </div>
                     )

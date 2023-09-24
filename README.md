@@ -40,6 +40,11 @@
 - (Feature) Add MultiLanguage Feature in Our App
 - Integrate GPT API's 
 - Get Open AI key
+- GPT search API Call
+- Memoization
+- Fetched GPT Movie Suggestions From tmdb 
+- GPT Slice added Data
+- Reuse Movie List component to make movie suggestion container
 - 
 - 
 

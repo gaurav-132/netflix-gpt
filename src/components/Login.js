@@ -72,10 +72,11 @@ const Login = () => {
             <div className='absolute'>
                 <img src={NETFLIX_BACK_URL}
                     alt='background'
+                    className='h-screen object-cover md:w-screen'
                 />
             </div>
-            <form onSubmit={(e) => e.preventDefault()} className='absolute w-2/6 p-12 text-center right-0 left-0 mx-auto mt-36 bg-black bg-opacity-90'>
-                <h1 className='font-bold text-3xl text-white text-left '>{isSigninForm ? "Sign In":"Sign Up"}</h1>
+            <form onSubmit={(e) => e.preventDefault()} className='absolute w-[90%] md:w-2/6 p-12 text-center right-0 left-0 mx-auto mt-36 bg-black bg-opacity-90'>
+                <h1 className='font-semibold md:font-bold text-2xl md:text-3xl text-white text-left '>{isSigninForm ? "Sign In":"Sign Up"}</h1>
                 <input
                     ref={email}
                     type='text' 

@@ -5,14 +5,17 @@ import {NETFLIX_BACK_URL} from '../utils/constants';
 
 const GptPage = () => {
     return (
-		<div>
-			<div className='absolute -z-10'>
+	<div className=''>
+			<div className='absolute -z-10 md:w-full'>
 				<img
 					src={NETFLIX_BACK_URL}
+					className='h-screen object-cover md:w-full'
 				/>
 			</div>
-			<GptSearchBar/>
-			<GptMovieSuggestions/>
+			<div className=''>
+				<GptSearchBar/>
+				<GptMovieSuggestions/>
+			</div>
 		</div>
     )
 }
