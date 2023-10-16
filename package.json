@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.4.2",
+    "@fortawesome/free-solid-svg-icons": "^6.4.2",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -11,7 +14,9 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.1.2",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
+    "react-slick": "^0.29.0",
+    "slick-carousel": "^1.8.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -42,5 +47,9 @@
     "@reduxjs/toolkit": "^1.9.5",
     "react-router-dom": "^6.15.0",
     "tailwindcss": "^3.3.3"
-  }
+  },
+  "description": "- Create React App\r - Configured Tailwindcss into our App\r - Header\r - Routing of App\r - Login form\r - Sign Up form\r - Form Validation\r - useRef Hook\r - Firebase Setup\r - Deploying our App to Production\r - Create SignUp User Account    \r - Implemented Sign In User Api\r - Created Redux Store with userslice\r - Implemented Sign Out  \r - Update the Profile\r - Redirect if the user is  logged in redirect to /browse\r - Unsubscribed to the OnAuth State Change CallBack\r - Add Hardcoded Value to constant.js\r - Register TMDB API and create an App\r - Get the data from TMDB now playing Movies\r - Custom hook for now playing movies\r - Update Store with movies Data\r - Create a Movie Slice\r - Planning for main contaier and secondary Container\r - Fetch Data for Trailer Video\r - Update Store With Trailer Video Data\r - Embeded the youtube video\r - Make it autoplay and mute\r - Tailwind classes to main Container look awesome\r - Build Secondary Container\r - Build Movie List\r - Build Movie Card\r - TMDB Image CDN Url\r - Made the Browse Page amazing\r - usePopular Movies Custome hook\r - GPT Search Feature\r - GPT Search Page, SearchBar\r - (Feature) Add MultiLanguage Feature in Our App\r - Integrate GPT API's \r - Get Open AI key\r - GPT search API Call\r - Memoization\r - Fetched GPT Movie Suggestions From tmdb \r - GPT Slice added Data\r - Reuse Movie List component to make movie suggestion container\r - \r -",
+  "main": "tailwind.config.js",
+  "author": "",
+  "license": "ISC"
 }
